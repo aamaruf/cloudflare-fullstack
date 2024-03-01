@@ -1,6 +1,7 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
+
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
@@ -8,7 +9,20 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": false
+		"strict": false,
+		// new...
+		"verbatimModuleSyntax": false,
+		"incremental": true,
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+
+
+
+
+
+
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

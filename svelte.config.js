@@ -1,5 +1,5 @@
 // import adapter from '@sveltejs/adapter-cloudflare';
-import adapter from '@chientrm/adapter-cloudflare'; //this adepter can support for node
+import adapter from '@sveltejs/adapter-cloudflare'; //this adepter can support for node
 
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
@@ -12,7 +12,13 @@ const config = {
 	preprocess: [mdsvex({ extensions: ['.svelte.md', '.md', '.svx'] }), vitePreprocess()],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		csrf: {
+			checkOrigin: false
+		},
+		alias: {
+			'$src/*': 'src/*'
+		}
 	}
 };
 
